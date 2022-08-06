@@ -1,5 +1,8 @@
 pipeline {
   agent any
+   tools{
+     maven '3.8.6'
+     }
   stages {
     stage('Build Application "no Aço como André Dionisio"') { 
       steps {
