@@ -8,6 +8,8 @@ pipeline {
       steps {
         sh 'mvn clean install'
       }
+     }
+    }
    stages {
     stage('Deploy Application "no Aço"') { 
       steps {
