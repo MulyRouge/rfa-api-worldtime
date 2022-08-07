@@ -36,7 +36,7 @@
 						<environment>Sandbox</environment>
 						<workers>1</workers>
 						<workerType>micro</workerType>
-						<applicationName>world-timezone-service</applicationName>
+						<applicationName>rfa-api-worldtime</applicationName>
 						<muleVersion>4.4.0</muleVersion>
 					</cloudHubDeployment>
 					<classifier>mule-application</classifier>
