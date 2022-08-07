@@ -35,7 +35,7 @@
 						<password>Work4Mule</password>
 						<environment>Sandbox</environment>
 						<workers>1</workers>
-						<workType>micro</workType>
+						<workerType>micro</workerType>
 						<applicationName>world-timezone-service</applicationName>
 						<muleVersion>4.4.0</muleVersion>
 					</cloudHubDeployment>
