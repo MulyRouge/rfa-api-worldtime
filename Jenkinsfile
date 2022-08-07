@@ -11,7 +11,7 @@ pipeline {
      } 
    stage('Deploy Application "no Aço"') { 
       steps {
-        sh 'package deploy -DmuleDeploy'
+        sh 'clean package deploy -DmuleDeploy'
       }
     }
    } 
