@@ -8,13 +8,11 @@ pipeline {
       steps {
         sh 'mvn clean install'
       }
-     }
-    }
-   stages {
-    stage('Deploy Application "no Aço"') { 
+     } 
+   stage('Deploy Application "no Aço"') { 
       steps {
         sh 'package deploy -DmuleDeploy'
       }
     }
-  }
+   } 
 }
