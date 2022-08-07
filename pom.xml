@@ -32,7 +32,7 @@
 				<configuration>
 					<cloudHubDeployment>
 						<username>fernando_072022</username>
-						<password>Work4Mule</password>
+						<password>Work4mule</password>
 						<environment>Sandbox</environment>
 						<workers>1</workers>
 						<workerType>micro</workerType>
