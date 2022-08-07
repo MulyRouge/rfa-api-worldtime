@@ -38,6 +38,7 @@
 						<workerType>micro</workerType>
 						<applicationName>rfa-api-worldtime</applicationName>
 						<muleVersion>4.4.0</muleVersion>
+						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 					<classifier>mule-application</classifier>
 				</configuration>
