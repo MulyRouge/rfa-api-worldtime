@@ -2,6 +2,7 @@ pipeline {
   agent any
    tools{
      maven '3.8.6'
+     nodejs 'Nodejs_for_newman'
     
      }
   stages {
@@ -10,11 +11,7 @@ pipeline {
         sh 'mvn clean install'
       }
      } 
-   stage('Deploy Application "no Aço"') { 
-      steps {
-        sh ' mvn clean package deploy -DmuleDeploy'
-      }
-    }
+  
    stage('Test Integration Application') { 
       steps {
        
