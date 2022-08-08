@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "36a599ac-a7a1-491c-940b-4300927e3541",
+		"name": "Worldtimezone_tes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22409547"
+	},
+	"item": [
+		{
+			"name": "worldtime-collection",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://rfa-api-worldtime.us-e2.cloudhub.io/Europe/London",
+					"protocol": "http",
+					"host": [
+						"rfa-api-worldtime",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"Europe",
+						"London"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
