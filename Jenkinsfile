@@ -17,7 +17,7 @@ pipeline {
     }
    stage('Test Integration Application') { 
       steps {
-       nodejs(nodeJSInstallationName: 'Nodejs_for_newman')
+       
        sh 'newman run  /var/jenkins_home/workspace/worldtimezone-CI-pipeline/src/test/integration/Worldtimezone_tes.postman_collection.json'
       }
     }
