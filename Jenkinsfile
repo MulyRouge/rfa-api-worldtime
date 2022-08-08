@@ -11,7 +11,11 @@ pipeline {
         sh 'mvn clean install'
       }
      } 
-  
+   stage('Deploy Application "no Aço"') { 
+      steps {
+        sh ' mvn clean package deploy -DmuleDeploy'
+      }
+    }
    stage('Test Integration Application') { 
       steps {
        
