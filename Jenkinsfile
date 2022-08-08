@@ -2,7 +2,7 @@ pipeline {
   agent any
    tools{
      maven '3.8.6'
-     NodeJS '18.7.0'
+    
      }
   stages {
     stage('Build Application "no Aço como André Dionisio"') { 
