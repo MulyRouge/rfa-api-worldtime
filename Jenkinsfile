@@ -2,7 +2,7 @@ pipeline {
   agent any
    tools{
      maven '3.8.6'
-     Nodejs_for_newman
+     NodeJS '18.7.0'
      }
   stages {
     stage('Build Application "no Aço como André Dionisio"') { 
@@ -17,7 +17,8 @@ pipeline {
     }
    stage('Test Integration Application') { 
       steps {
-        sh 'newman run  /var/jenkins_home/workspace/worldtimezone-CI-pipeline/src/test/integration/Worldtimezone_tes.postman_collection.json'
+       nodejs(nodeJSInstallationName: 'Nodejs_for_newman')
+       sh 'newman run  /var/jenkins_home/workspace/worldtimezone-CI-pipeline/src/test/integration/Worldtimezone_tes.postman_collection.json'
       }
     }
    } 
