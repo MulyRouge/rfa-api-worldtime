@@ -10,6 +10,11 @@ pipeline {
       steps {
         sh 'mvn clean install'
       }
+     }  
+   stage('Munit Testing Application') { 
+      steps {
+        sh 'mvn clean install'
+      }
      } 
    stage('Deploy Application "no Aço"') { 
       steps {

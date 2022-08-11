@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="rfa-api-worldtime-test-suite.xml" />
+	<munit:test name="rfa-api-worldtime-test-suite-rfa-api-worldtimeFlowTest2" doc:id="91a3d0b6-db08-4e5c-8504-0763c15fcf3e" description="Test">
+		<munit:behavior >
+			<munit:set-event doc:name="Set Event" doc:id="33b85969-cd9c-4c6f-88d9-25e9363e4d2c">
+				<munit:attributes value="#[{uriParams:{region:'Europe',city:'London'}}]" />
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<try doc:name="Try" doc:id="f1fb8aa5-8e6a-4039-b843-f8871fdb56f9" >
+				<flow-ref doc:name="Flow-ref to rfa-api-worldtimeFlow" doc:id="5d53c7d6-96c6-4307-8d19-bf286fc32841" name="rfa-api-worldtimeFlow" />
+				<error-handler >
+					<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="4ed92d16-86cb-4557-beea-77accbe4ba3f" />
+				</error-handler>
+			</try>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="fedb298a-cfec-4e9a-bf58-9361b37d7579" expression="#[payload]" is="#[MunitTools::notNullValue()]" message="Payload is null"/>
+		</munit:validation>
+	</munit:test>
+
+</mule>
