@@ -32,8 +32,8 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<username>fernando_072022</username>
-						<password>Work4mule</password>
+						<username>${username}</username>
+						<password>${password}</password>
 						<environment>Sandbox</environment>
 						<workers>1</workers>
 						<workerType>micro</workerType>
