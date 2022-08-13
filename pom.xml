@@ -31,19 +31,21 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHubDeployment>
-						<username>fernando_072022</username>
-						<password>Work4mule</password>
-						<environment>Sandbox</environment>
-						<workers>1</workers>
-						<workerType>micro</workerType>
-						<applicationName>rfa-api-worldtime</applicationName>
-						<muleVersion>4.4.0</muleVersion>
-						<objectStoreV2>true</objectStoreV2>
-					</cloudHubDeployment>
 					<classifier>mule-application</classifier>
-				</configuration>
-			</plugin>
+				   <armDeployment>
+                     <muleVersion>4.4.0</muleVersion>
+      				<uri>https://anypoint.mulesoft.com</uri>
+                   <target>msnode01</target>
+      <targetType>server</targetType>
+      <username>fernando_072022</username>
+      <password>Work4mule</password>
+      <environment>Sandbox</environment>
+      <properties>
+        <key>value</key>
+      </properties>
+      </armDeployment>
+	</configuration>
+			   		</plugin>
 			<plugin>
 				<groupId>com.mulesoft.munit.tools</groupId>
 				<artifactId>munit-maven-plugin</artifactId>

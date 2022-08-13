@@ -16,7 +16,7 @@ pipeline {
         sh 'mvn clean install'
       }
      } 
-   stage('Deploy Application "no Aço"') { 
+   stage('Deploy Application "ARM"') { 
       steps {
         sh ' mvn clean package deploy -DmuleDeploy'
       }
